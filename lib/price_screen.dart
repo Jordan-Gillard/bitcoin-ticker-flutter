@@ -1,4 +1,3 @@
-import 'package:bitcoin_ticker/coin_data.dart';
 import 'package:flutter/material.dart';
 
 class PriceScreen extends StatefulWidget {
@@ -55,6 +54,10 @@ class _PriceScreenState extends State<PriceScreen> {
                 DropdownMenuItem(
                   value: 'EUR',
                   child: Text('EUR'),
+                ),
+                DropdownMenuItem(
+                  value: 'GBP',
+                  child: Text('GBP'),
                 ),
               ],
               onChanged: (value) {
