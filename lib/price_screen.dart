@@ -47,21 +47,7 @@ class _PriceScreenState extends State<PriceScreen> {
             color: Colors.lightBlue,
             child: DropdownButton<String>(
               value: selectedCurrency,
-              items: getCurrencies(),
-//              items: [
-//                DropdownMenuItem(
-//                  value: 'USD',
-//                  child: Text('USD'),
-//                ),
-//                DropdownMenuItem(
-//                  value: 'EUR',
-//                  child: Text('EUR'),
-//                ),
-//                DropdownMenuItem(
-//                  value: 'GBP',
-//                  child: Text('GBP'),
-//                ),
-//              ],
+              items: getCurrenciesForDropdownBox(),
               onChanged: (value) {
                 setState(() {
                   selectedCurrency = value;
@@ -75,7 +61,7 @@ class _PriceScreenState extends State<PriceScreen> {
   }
 }
 
-getCurrencies() {
+getCurrenciesForDropdownBox() {
   List<DropdownMenuItem<String>> items = [];
   for (int i = 0; i < currenciesList.length; i++) {
     items.add(
